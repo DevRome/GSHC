@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good Samaritan Home Care Pty Ltd</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Samaritan.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Header with Video Background -->
+    <header>
+        <div class="brand">
+            <img src="Images/Good_Samaritan.jpg" alt="Good Samaritan Logo" class="logo" />
+        </div>
+
+
+        <div class="navbar">
+            <div class="searchBox">
+                <input type="text" placeholder="Search services...">
+                <i class="fas fa-search" id="searchIcon"></i>
+            </div>
+
+            <ul>
+                <li><span class="fas fa-home" id="headIcon"></span><a href="index.html">Home</a></li>
+                <li><span class="fas fa-hand-holding-heart" id="headIcon"></span><a href="#services">Services</a></li>
+                <li><span class="fas fa-info-circle" id="headIcon"></span><a href="ABOUT_SAMARITAN.html">About</a></li>
+                <li><span class="fas fa-envelope" id="headIcon"></span><a href="CONTACT_SAMARITAN.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="videos/homecare.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1>Compassionate Care in the Comfort of Your Home</h1>
+                <p>Delivering trusted, professional home care tailored to your needs.</p>
+                <a href="ABOUT_SAMARITAN.html" class="button">Learn More</a>
+
+            </div>
+        </section>
+
+
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-user-nurse"></i>
+                    <h4>Assistance with Daily Living.</h4>
+                    <p>Assistance with daily personal care (e.g. showering, dressing and grooming.)</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h4>Domestic Assistance</h4>
+                    <p>Professional Domestic Assistance(e.g Cleaning, Laundrying and Gardening).</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Assistance with Social Community and Community Participation.</h4>
+                    <p>Community Access and Activities Transport.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Care Section -->
+        <section class="how-we-care">
+            <h2>How We Care</h2>
+            <div class="care-grid">
+                <div class="care-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Respect & Dignity</h4>
+                    <p>We treat every individual with compassion, dignity, and the utmost respect.</p>
+                </div>
+                <div class="care-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Safety First</h4>
+                    <p>Our trained staff follow strict protocols to ensure the safety of our clients.</p>
+                </div>
+                <div class="care-card">
+                    <i class="fas fa-user-friends"></i>
+                    <h4>Personalized Attention</h4>
+                    <p>Every care plan is tailored to each client’s unique needs and preferences.</p>
+                </div>
+                <div class="care-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Holistic Wellness</h4>
+                    <p>We focus on both physical and emotional well-being in our services.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us -->
+        <section class="why-us">
+            <h2>Why Families Choose Good Samaritan</h2>
+            <div class="why-grid">
+                <div>
+                    <i class="fas fa-check-circle fa-2x"></i>
+                    <h4>Reliable Staff</h4>
+                    <p>Trained, screened, and experienced caregivers you can count on.</p>
+                </div>
+                <div>
+                    <i class="fas fa-clock fa-2x"></i>
+                    <h4>24/7 Availability</h4>
+                    <p>Flexible and round-the-clock care when you need it most.</p>
+                </div>
+                <div>
+                    <i class="fas fa-heart fa-2x"></i>
+                    <h4>Compassionate Approach</h4>
+                    <p>Empathetic care that honors each individual’s needs and dignity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <blockquote>
+                “The caregivers from Good Samaritan are like family. They've made our lives so much easier.”
+            </blockquote>
+            <blockquote>
+                “Truly compassionate and reliable. I feel safe knowing my father is in their care.”
+            </blockquote>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Get in Touch</h2>
+            <p>Have questions? Send us a message and we’ll get back to you shortly.</p>
+
+            <div class="contact-wrapper">
+                <!-- Left: Video -->
+                <div class="contact-video">
+                    <video src="videos/homecare2.mp4" autoplay muted loop playsinline></video>
+                </div>
+
+                <!-- Right: Form -->
+                <form action="#" method="POST" class="contact-form">
+                   <input type="text" id="name" name="name" placeholder="Your Name" required />
+                   <input type="email" id="email" name="email" placeholder="Your Email" required />
+                   <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                   <button type="button" class="button" onclick="sendMail()">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="samaritan-footer">
+        <div class="footer-wrapper">
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Good Samaritan Home Care Pty Ltd</p>
+                <p>+0400 123 456</p>
+                <p>support@gshomecare.com.au</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="ABOUT_SAMARITAN.html">Who we are</a></li>
+                    <li><a href="CONTACT_SAMARITAN.html">Get Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+  // Initialize EmailJS with your public key
+  emailjs.init("t6EzJISzr4Wnws-_r");
+
+  // Form submission function
+  function sendMail() {
+    const params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value
+    };
+
+    const serviceID = "service_ev0izgh";
+    const templateID = "template_le639v8";
+
+    emailjs.send(serviceID, templateID, params)
+      .then(res => {
+        // Clear input fields after success
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+
+        console.log("SUCCESS!", res.status, res.text);
+        alert("Your message was sent successfully!");
+      })
+      .catch(err => {
+        console.error("FAILED...", err);
+        alert("There was an error sending your message.");
+      });
+  }
+</script>
+
+</html>

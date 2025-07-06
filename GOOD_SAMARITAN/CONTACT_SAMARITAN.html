@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Good Samaritan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="Images/Good_Samaritan.jpg" alt="Logo" class="logo" />
+      <h1>Good Samaritan</h1>
+    </div>
+    <div class="navbar">
+      <div class="searchBox">
+        <input type="text" placeholder="Search..." />
+        <i class="fas fa-search" id="searchIcon"></i>
+      </div>
+      <ul>
+        <li><i class="fas fa-home"></i><a href="index.html">Home</a></li>
+        <li><i class="fas fa-hand-holding-heart"></i><a href="index.html#services">Services</a></li>
+        <li><i class="fas fa-info-circle"></i><a href="ABOUT_SAMARITAN.html">About</a></li>
+        <li><i class="fas fa-envelope"></i><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="about-hero">
+    <h1>Contact Us</h1>
+    <p>We’re here to help you find the care and support you need.</p>
+  </section>
+
+ <!-- Contact Section -->
+<section class="contact-section-custom">
+  <div class="contact-image-custom">
+    <img src="Images/caregiver3.jpeg" alt="Contact Care" />
+  </div>
+
+  <div class="contact-text-custom">
+    <h2>Send Us a Message</h2>
+    <p>Fill out the form and one of our care specialists will get back to you shortly.</p>
+    <form action="#" method="POST" class="custom-form">
+     <input type="text" id="name" name="name" placeholder="Your Name" required />
+     <input type="email" id="email" name="email" placeholder="Your Email" required />
+     <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+     <button type="button" class="button-custom" onclick="sendMail()">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Optional: Embedded Google Map -->
+  <!--
+  <section class="about-cta" style="min-height: 400px;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=YOUR_EMBED_URL"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+  -->
+
+  <!-- Footer -->
+  <footer class="samaritan-footer">
+    <div class="footer-wrapper">
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>Good Samaritan Home Care Pty Ltd</p>
+        <p>+61 123 456 789</p>
+        <p>support@gshomecare.com.au</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#services">Our Services</a></li>
+          <li><a href="ABOUT_SAMARITAN.html">Who We Are</a></li>
+          <li><a href="CONTACT_SAMARITAN.html">Get Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  // Initialize EmailJS with your public key
+  emailjs.init("t6EzJISzr4Wnws-_r");
+
+  // Form submission function
+  function sendMail() {
+    const params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value
+    };
+
+    const serviceID = "service_ev0izgh";
+    const templateID = "template_le639v8";
+
+    emailjs.send(serviceID, templateID, params)
+      .then(res => {
+        // Clear input fields after success
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+
+        console.log("SUCCESS!", res.status, res.text);
+        alert("Your message was sent successfully!");
+      })
+      .catch(err => {
+        console.error("FAILED...", err);
+        alert("There was an error sending your message.");
+      });
+  }
+</script>
+</html>
