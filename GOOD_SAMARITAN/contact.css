@@ -238,7 +238,7 @@ header {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
 }
 
-* ===== MODAL MESSAGE STYLES ===== */
+/* ===== MODAL MESSAGE STYLES ===== */
 /* Modal Background */
 .modal {
   display: none; /* Hidden by default */
