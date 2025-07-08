@@ -162,6 +162,16 @@
             </div>
         </section>
 
+            <!-- Success Modal -->
+       <div id="successModal" class="modal">
+         <div class="modal-content">
+         <span class="close-btn" onclick="closeModal()">&times;</span>
+         <h2>Thank You!</h2>
+         <p>Your message has been sent successfully.</p>
+         </div>
+       </div>
+
+
     </main>
 
     <!-- Footer -->
@@ -202,10 +212,8 @@
     </footer>
 </body>
 <script>
-  // Initialize EmailJS with your public key
   emailjs.init("t6EzJISzr4Wnws-_r");
 
-  // Form submission function
   function sendMail() {
     const params = {
       name: document.getElementById("name").value,
@@ -218,19 +226,33 @@
 
     emailjs.send(serviceID, templateID, params)
       .then(res => {
-        // Clear input fields after success
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
 
         console.log("SUCCESS!", res.status, res.text);
-        alert("Your message was sent successfully!");
+        showModal(); // ← show modal instead of alert
       })
       .catch(err => {
         console.error("FAILED...", err);
         alert("There was an error sending your message.");
       });
   }
-</script>
 
+  function showModal() {
+    document.getElementById("successModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("successModal").style.display = "none";
+  }
+
+  // Optional: close modal by clicking outside of it
+  window.onclick = function (event) {
+    const modal = document.getElementById("successModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
 </html>
