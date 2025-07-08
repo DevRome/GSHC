@@ -129,11 +129,11 @@
   </footer>
 </body>
 
-
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
     emailjs.init("t6EzJISzr4Wnws-_r");
 
-    function sendMail() {
+    window.sendMail = function () {
       const params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -156,15 +156,15 @@
           console.error("FAILED...", err);
           alert("There was an error sending your message.");
         });
-    }
+    };
 
-    function showModal() {
+    window.showModal = function () {
       document.getElementById("successModal").style.display = "block";
-    }
+    };
 
-    function closeModal() {
+    window.closeModal = function () {
       document.getElementById("successModal").style.display = "none";
-    }
+    };
 
     window.onclick = function (event) {
       const modal = document.getElementById("successModal");
@@ -172,5 +172,6 @@
         modal.style.display = "none";
       }
     };
-  </script>
+  });
+</script>
 </html>
