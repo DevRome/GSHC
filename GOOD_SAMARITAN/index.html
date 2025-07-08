@@ -229,9 +229,7 @@
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
-
-        console.log("SUCCESS!", res.status, res.text);
-        showModal(); // ← show modal instead of alert
+        showModal();
       })
       .catch(err => {
         console.error("FAILED...", err);
@@ -240,14 +238,19 @@
   }
 
   function showModal() {
-    document.getElementById("successModal").style.display = "block";
+    const modal = document.getElementById("successModal");
+    modal.style.display = "block";
+
+    // Auto-close after 3 seconds
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 3000);
   }
 
   function closeModal() {
     document.getElementById("successModal").style.display = "none";
   }
 
-  // Optional: close modal by clicking outside of it
   window.onclick = function (event) {
     const modal = document.getElementById("successModal");
     if (event.target === modal) {
