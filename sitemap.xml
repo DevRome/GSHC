@@ -1,19 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://goodsamaritan.site/</loc>
-  </url>
-  <url>
-    <loc>https://goodsamaritan.site/ABOUT_SAMARITAN.html</loc>
-  </url>
-  <url>
-    <loc>https://goodsamaritan.site/CONTACT_SAMARITAN.html</loc>
-  </url>
-  <url>
-    <loc>https://goodsamaritan.site/SAMARITAN_POLICY.html</loc>
-  </url>
-  <url>
-    <loc>https://goodsamaritan.site/SAMARITAN_TERMS.html</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://goodsamaritan.site/</loc>
+<lastmod>2025-07-20T05:16:58+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://goodsamaritan.site/index.html</loc>
+<lastmod>2025-07-20T05:16:58+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://goodsamaritan.site/ABOUT_SAMARITAN.html</loc>
+<lastmod>2025-07-20T05:16:58+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://goodsamaritan.site/CONTACT_SAMARITAN.html</loc>
+<lastmod>2025-07-20T05:16:58+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://goodsamaritan.site/SAMARITAN_POLICY.html</loc>
+<lastmod>2025-07-20T05:16:58+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://goodsamaritan.site/SAMARITAN_TERMS.html</loc>
+<lastmod>2025-07-20T05:16:58+00:00</lastmod>
+<priority>0.80</priority>
+</url>
 </urlset>
-
